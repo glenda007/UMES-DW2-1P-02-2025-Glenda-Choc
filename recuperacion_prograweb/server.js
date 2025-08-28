@@ -1,4 +1,4 @@
-import 'dotenv';
+import 'dotenv/config';
 import express from 'express';
 import { Mongocelular } from './configs/mongodb.config.js';
 import routes from './routes/index.route.js';
@@ -16,6 +16,6 @@ Mongocelular.connectToServer((err) => {
         return;
     }
     app.listen(PORT, () => {
-        console.log('Servidor ejecutándose en http://localhost:${PORT}');
+        console.log(`Servidor ejecutándose en http://localhost:${PORT}`);
     });
 });
