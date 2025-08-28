@@ -1,13 +1,11 @@
+import 'dotenv/config';
 import { MongoClient } from 'mongodb';
-import dotenv from 'dotenv';
 
-dotenv.config();
-
-const mongoHost = process.env.MONGO_HOST;
-const mongoPort = process.env.MONGO_PORT;
-const mongoDb = process.env.MONGO_DB;
-const mongoUser = process.env.MONGO_DB_USER;
-const mongoPassword = process.env.MONGO_DB_PASSWORD;  
+const mongoHost = process.env.MONGODB_HOST;
+const mongoPort = process.env.MONGODB_PORT;
+const mongoDb = process.env.MONGODB_DB;
+const mongoUser = process.env.MONGODB_USER;
+const mongoPassword = process.env.MONGODB_PASS;  
 
 const connectionString = `mongodb://${mongoUser}:${mongoPassword}@${mongoHost}:${mongoPort}/${mongoDb}`; 
 

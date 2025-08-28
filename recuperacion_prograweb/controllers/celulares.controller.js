@@ -1,6 +1,6 @@
 import Joi from 'joi';
 import celularesService from '../services/celulares.service.js';
-const responseHelper = require('../helpers/response.helper.js');
+import responseHelper from '../helpers/response.helper.js';
 
 const celularSchema = Joi.object({
     nombreAlumno: Joi.string().required().messages({
